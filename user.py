@@ -546,7 +546,7 @@ async def contact_handler(callback: types.CallbackQuery):
         "Savol, shikoyat, takliflar bo`lsa bizga murojaat\n"
             " qilishingiz mumkin ,"
              "adminga yozish👇"
-             "📞@zero600x\n",
+             "📞@zero600x:\n",
         reply_markup=main_keyboard()
     )
     await callback.answer()
