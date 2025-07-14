@@ -503,7 +503,7 @@ async def confirm_withdrawal(callback: types.CallbackQuery, state: FSMContext):
     card = data['withdraw_card']
 
     try:
-        with sqlite3.connect("database.db", check_same_thread=False) as conn:
+        with sqlite3.connect("DB_PATH", check_same_thread=False) as conn:
             cursor = conn.cursor()
             cursor.execute(
                 "UPDATE users SET balance = balance - ?, last_active = CURRENT_TIMESTAMP WHERE user_id = ?",
